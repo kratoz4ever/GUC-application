@@ -29,6 +29,7 @@ public class DeviceDetailActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                firebaseAuth.getInstance().signOut();
                 Intent intent=new Intent(DeviceDetailActivity.this,MainActivity.class);
                 startActivity(intent);
             }
